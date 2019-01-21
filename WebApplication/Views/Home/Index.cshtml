@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Домашняя страница";
+}
+
+@model IEnumerable<WebApplication.Models.Movie>
+
+<h2 class="h2">Фильмы с IMDB</h2>
+
+<div class="all-movies-list">
+    @foreach (var item in Model)
+    {
+        <div>
+            <a class="btn-link" href=""><h4 class="h4">@item.Id @item.Name</h4></a>
+            <p>(@item.Year)</p>
+            <p>@item.Description</p>
+        </div>
+    }
+</div>
